@@ -20,7 +20,7 @@ pipeline {
             steps {
                 sh 'mkdir /ws/output/'
                 sh 'cp /ws/pi/build/tmp/deploy/images/raspberrypi0-2w-64/core-image-minimal-raspberrypi0-2w-64.wic.bmap /ws/output/'
-                sh 'cp /ws/pi/build/tmp/deploy/images/raspberrypi0-2w-64/core-image-minimal-raspberrypi0-2w-64.wic.xz /ws/output/'
+                sh 'cp /ws/pi/build/tmp/deploy/images/raspberrypi0-2w-64/core-image-minimal-raspberrypi0-2w-64.wic.bz2 /ws/output/'
                 sh 'tar cf /ws/pi-image.$(basename ${GIT_BRANCH})-b${BUILD_NUMBER}-c${GIT_COMMIT} /ws/output/'
                 sh 'md5sum /ws/pi-image* > /ws/pi-image.$(basename ${GIT_BRANCH})-b${BUILD_NUMBER}-c${GIT_COMMIT}.md5'
             }
