@@ -2,5 +2,5 @@
 
 cd $(dirname $0)/..
 
-. /ws/pi/sources/poky/oe-init-build-env /ws/pi/build
+. pi/sources/poky/oe-init-build-env pi/build
 bitbake core-image-minimal
